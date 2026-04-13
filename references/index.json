@@ -1,0 +1,20 @@
+[
+  {
+    "_comment": "TEMPLATE — remove this entry and add your own reference files.",
+    "_schema": {
+      "file": "references/filename.md — path relative to skill root",
+      "description": "One sentence on what this file covers. Used by agents to understand what to look up here.",
+      "tags": [
+        "lowercase keywords that appear in error output, job names, or context when this reference is relevant",
+        "specific > generic — tags like 'docker' or 'python' work; tags like 'code' or 'error' do not",
+        "a reference is loaded only when at least one tag matches the failure context",
+        "tags are matched against: error log text, job/step names, stage names"
+      ]
+    }
+  },
+  {
+    "file": "references/quick_reference.md",
+    "description": "Lookup table for exact names, values, flags, and config keys used in [your domain].",
+    "tags": ["replace", "these", "with", "real", "keywords"]
+  }
+]
