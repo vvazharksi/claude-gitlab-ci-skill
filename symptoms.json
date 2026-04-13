@@ -1,0 +1,28 @@
+[
+  {
+    "_comment": "TEMPLATE — remove this entry and replace with your own symptoms.",
+    "_schema": {
+      "symptom": "Human-readable description of what the failure looks like. Use backtick-quoted error strings where possible.",
+      "cause": "The root cause — why this happens.",
+      "fix": "The precise fix. Reference exact names, paths, flags, or config keys.",
+      "keywords": [
+        "Verbatim substrings from error output that uniquely identify this failure.",
+        "Used for pre-filtering: only symptoms with a keyword match are sent to the agent.",
+        "Use exact casing from the error. Empty array only if no reliable error text exists.",
+        "More specific = less noise. Prefer exact error phrases over generic words."
+      ]
+    }
+  },
+  {
+    "symptom": "`ExampleError: something went wrong` in the [job/step] output",
+    "cause": "[Root cause] — e.g., missing config, wrong version, misconfigured dependency",
+    "fix": "Exact fix: set `CONFIG_KEY=value`, update `file.yml` line X, add `--flag` to command",
+    "keywords": ["ExampleError: something went wrong"]
+  },
+  {
+    "symptom": "`connection refused` or `timeout` connecting to [service]",
+    "cause": "[Service] not running or wrong address configured",
+    "fix": "Verify [service] is running; check `SERVICE_HOST` and `SERVICE_PORT` variables are set correctly",
+    "keywords": ["connection refused", "timeout"]
+  }
+]
